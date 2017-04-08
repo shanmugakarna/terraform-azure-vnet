@@ -20,4 +20,6 @@ module "vnet" {
 }
 ```
 ## Variables
-`cidr_split` is the offset used to split the CIDR. Having `/16` as VNET cidr, then `cidr_split` of `10` will create subnets with `/26`
+`cidr_split` is the prefix offset used to split the CIDR. Having `/16` as VNET cidr prefix, then `cidr_split` of `10` will create subnets with `/26` prefix
+
+subnet's cidr prefix = vnet's cidr prefix + cidr_split
