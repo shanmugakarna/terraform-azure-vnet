@@ -1,7 +1,7 @@
 # terraform-azure-vnet
 Terraform Module for Azure VNet and Subnet Creation
 
-##Usage
+## Usage
 ```
 resource "azurerm_resource_group" "network" {
   name     = "RG-VNET"
@@ -9,7 +9,7 @@ resource "azurerm_resource_group" "network" {
 }
 
 module "vnet" {
-  source        = "https://github.com/shanmugakarna/terraform-azure-vnet.git"
+  source        = "github.com/shanmugakarna/terraform-azure-vnet.git"
   region        = "East US"
   vnet_cidr     = "10.0.0.0/16"
   environment   = "staging"
@@ -19,5 +19,5 @@ module "vnet" {
   name_prefix   = "you_app-"
 }
 ```
-##Variables
+## Variables
 `cidr_split` is the offset used to split the CIDR. If have `/16` as VNET cidr, then `cidr_split` of `10` will create subnets with `/26`
