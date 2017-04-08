@@ -7,5 +7,5 @@ output "subnets" {
 }
 
 output "default_nsg" {
-  value =  [ "${azurerm_network_security_group.default.id}" ]
+  value =  "${azurerm_network_security_group.default.id}"
 }
